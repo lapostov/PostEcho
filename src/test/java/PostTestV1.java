@@ -8,13 +8,13 @@ public class PostTestV1 {
     public  void shouldReturnData(){
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some value") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("some value"));
+                .body("data", equalTo("some data"));
     }
 }
